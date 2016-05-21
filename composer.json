@@ -19,8 +19,11 @@
         "php": ">=5.5.0",
         "laravie/webhook": "^1.0",
         "php-http/guzzle6-adapter": "^1.1",
-        "illuminate/queue": "~5.2",
-        "illuminate/support": "~5.2"
+        "illuminate/queue": "~5.2.0",
+        "illuminate/support": "~5.2.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.2"
     },
     "extra": {
         "branch-alias": {
