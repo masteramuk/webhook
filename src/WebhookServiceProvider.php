@@ -2,7 +2,11 @@
 
 namespace Orchestra\Webhook;
 
+use Laravie\Webhook\Client;
 use Illuminate\Support\ServiceProvider;
+use Http\Client\Common\HttpMethodsClient;
+use Http\Adapter\Guzzle6\Client as GuzzleHttpClient;
+use Http\Message\MessageFactory\GuzzleMessageFactory;
 
 class WebhookServiceProvider extends ServiceProvider
 {
@@ -21,7 +25,19 @@ class WebhookServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('orchestra.webhook', function ($app) {
-            return Client::make();
+            $http = new HttpMethodsClient(new GuzzleHttpClient(), new GuzzleMessageFactory());
+
+            return new Client($http);
         });
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['orchestra.webhook'];
     }
 }
