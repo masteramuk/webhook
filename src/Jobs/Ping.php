@@ -3,7 +3,6 @@
 namespace Orchestra\Webhook\Jobs;
 
 use RuntimeException;
-use Illuminate\Support\Str;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
