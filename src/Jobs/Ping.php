@@ -18,28 +18,28 @@ class Ping implements ShouldQueue
      *
      * @var string
      */
-    protected $method;
+    public $method;
 
     /**
      * Request URI.
      *
      * @var string
      */
-    protected $uri;
+    public $uri;
 
     /**
      * Request Data.
      *
      * @var mixed
      */
-    protected $data = [];
+    public $data = [];
 
     /**
      * Request headers.
      *
      * @var array
      */
-    protected $headers = [];
+    public $headers = [];
 
     /**
      * Contruct a new Ping.
