@@ -51,7 +51,7 @@ class Ping implements ShouldQueue
      */
     public function __construct($method, $uri, $data = [], array $headers = [])
     {
-        $this->method  = Str::upper($method);
+        $this->method  = $method;
         $this->uri     = $uri;
         $this->data    = $data;
         $this->headers = $headers;
