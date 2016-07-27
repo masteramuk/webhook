@@ -15,6 +15,11 @@
             "Orchestra\\Webhook\\": "src/"
         }
     },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
     "require": {
         "php": ">=5.5.0",
         "laravie/webhook": "^1.0",
